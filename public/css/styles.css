@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+body {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    width: 70rem;
+    margin: 0 auto;
+}
+
+.ui {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#buttons input {
+    margin-right: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Notes Card */
+.notes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.note {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 20rem;
+    margin: 20px;
+}
+
+.note .title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+}
+
+.note .body {
+    padding: 5px 10px;
+}
+
+.note .body .buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px 0;
+} /* notes card end */
+

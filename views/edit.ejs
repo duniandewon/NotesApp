@@ -1,0 +1,19 @@
+<% include partials/header %>
+
+    <div class="container">
+        <h2 class="text-center">New <%= note.title %></h2>
+        <form action="/notes/<%= note._id %>?_method=PUT" method="POST">
+            <div id="note-title" class="ui">
+                <input type="text" name="note[title]" value="<%= note.title %>">
+            </div>
+            <div id="note-body" class="ui">
+                <textarea name="note[body]" ><%= note.body %></textarea>
+            </div>
+            <div id="buttons" class="ui">
+                <input type="submit" value="SUBMIT">
+                <a href="/notes">cancel</a>
+            </div>
+        </form>
+    </div>
+
+<% include partials/footer %>
