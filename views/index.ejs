@@ -3,17 +3,15 @@
         <% notes.forEach(function(note){ %>
             <div class="note">
                 <div class="title">
-                    <a href="/notes/<%= note._id %>/edit"><%= note.title %></a>
+                    <a href="/notes/<%= note._id %>"><%= note.title %></a>
                 </div>
                 <div class="body">
                     <div class="content">
                         <%= note.body %>
                     </div>
                     <div class="buttons">
-                        <form action="/notes/<%= note._id %>?_method=DELETE" method="POST">
-                            <a href="/notes/<%= note._id %>/edit" class="edit-btn">EDIT</a>
-                            <button>DELETE</button>
-                        </form>
+                        <a href="/notes/<%= note._id %>/edit" class="edit-btn">EDIT</a>
+                        <a href="/notes/<%= note._id %>/">DETAILS</a>
                     </div>
                 </div>
             </div>

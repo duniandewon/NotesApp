@@ -1,0 +1,23 @@
+<% include partials/header %>
+
+    <div class="container">
+        <div class="note">
+            <div class="title">
+                <%= note.title %>
+            </div>
+            <div class="body">
+                <div class="content">
+                    <%= note.body %>
+                </div>
+                <div class="buttons">
+                    <form action="/notes/<%= note._id %>?_method=DELETE" method="POST">
+                        <button>DELETE</button>
+                    </form>
+                    <a href="/notes/<%= note._id %>/edit" class="buttons">EDIT</a>
+                    <a href="/notes" class="button">BACK</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<% include partials/footer %>

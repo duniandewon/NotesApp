@@ -68,6 +68,17 @@ app.post('/notes', function(req, res){
     });
 });
 
+// SHOW Route
+app.get('/notes/:id', function(req, res){
+    Notes.findById(req.params.id, function(err, foundNote){
+        if(err) {
+            res.redirect('/notes');
+        } else {
+            res.render ('ShowNote', {note: foundNote})
+        }
+    });
+});
+
 // EDIT Route
 app.get('/notes/:id/edit', function(req, res){
     Notes.findById(req.params.id, function(err, foundNote){
