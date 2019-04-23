@@ -105,7 +105,7 @@ app.put('/notes/:id', function(req, res){
 // DELETE Route
 app.delete('/notes/:id', function(req, res){
     // destroy Note
-    Notes.findOneAndDelete(req.params.id, function(err){
+    Notes.findByIdAndRemove(req.params.id, function(err){
         if(err) {
             res.redirect('/notes');
         } else {
