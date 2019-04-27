@@ -1,5 +1,19 @@
 <% include partials/header %>
-    <div class="container notes">
+    <div class="container">
+        <h2 class="text-center">New Note</h2>
+        <form action="/notes" method="POST">
+            <div id="note-title" class="ui">
+                <input type="text" name="note[title]" placeholder="Title.." required>
+            </div>
+            <div id="note-body" class="ui">
+                <textarea name="note[body]" placeholder="Take a note..."></textarea>
+            </div>
+            <div id="buttons" class="ui">
+                <input type="submit" value="SUBMIT">
+            </div>
+        </form>
+    </div>
+    <div id="notes" class="container">
         <% notes.forEach(function(note){ %>
             <div class="note">
                 <div class="title">

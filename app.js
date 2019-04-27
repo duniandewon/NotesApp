@@ -28,12 +28,12 @@ const Notes = mongoose.model('Note', notesSchema);
 // Create a note in database
 // createNote();
 
-function createNote () {
-    Notes.create({
-        title: 'Mangas reading',
-        body: 'Shinmai Maou no keiyakusha Manga: 19, Domestik na kanojo: 83, Gokukoku no Brynhildr: 167, Minamoto monogatari: 207'
-    });
-}
+// function createNote () {
+//     Notes.create({
+//         title: 'Mangas reading',
+//         body: 'Shinmai Maou no keiyakusha Manga: 19, Domestik na kanojo: 83, Gokukoku no Brynhildr: 167, Minamoto monogatari: 207'
+//     });
+// }
 
 // Root Route
 app.get('/', function(req, res){
@@ -49,11 +49,6 @@ app.get('/notes', function(req, res){
             res.render('index', {notes: notes})
         }
     });
-});
-
-// NEW Route
-app.get('/notes/new', function(req, res){
-    res.render('NewNote');
 });
 
 // CREATE Route
